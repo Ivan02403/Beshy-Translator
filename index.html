@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Beshy Sentence</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+
+		section{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			font-family: 'Ubuntu', sans-serif;
+	
+		}
+
+		.container{
+			background-color: pink;
+			height: 40vh;
+			border-radius: 5px;
+			text-align: center;
+			width: 50%;
+			margin: 20px;
+		}
+
+		.container h1{
+			font-family: 'Ubuntu', sans-serif;
+			font-size: 20px;
+			margin: 20px;
+		}
+
+		.container input{
+			width: 75%;
+			border-radius: 5px;
+			height: 1.6rem;
+			margin-bottom: 20px;
+		}
+
+		.container button{
+			padding: 10px;
+			background-color: violet;
+			margin-bottom: 20px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.container button:hover{
+			background-color: purple;
+			color: aliceblue;
+		}
+
+		.container #demo{
+			background-color: papayawhip;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 10px;
+		}
+
+		textarea{
+			width: 75%;
+			height: 10vh;
+			border-radius: 10px;
+		}
+
+		footer{
+			background-color: peachpuff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		@media (max-width:600px){
+
+			.container{
+				width: 100%;
+				height: 40vh;
+				padding: 30px;
+			}
+
+			.container h1{
+				font-size: 20px;
+			}
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<h1>Beshy translator🤸🤸</h1>
+		<p><input class="inputText" type="text"></p>
+		<button onclick="beshyTranslate()">Translate</button>
+		<p><textarea id="textTranslated"></textarea></p>
+	</div>
+	</section>
+	
+		<footer>Ivan C. Reyes @2023</footer>
+
+	<script>
+		function beshyTranslate(){
+		let input = document.querySelector('.inputText').value;
+		let translate = input.replaceAll(" ", "🤸");
+		let translator =document.querySelector('#textTranslated').value= translate;
+		}
+	</script>
+</body>
+</html>
